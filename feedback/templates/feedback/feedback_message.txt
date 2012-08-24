@@ -1,0 +1,8 @@
+Message from {% if from %}{{ from }} <{{from.email}}>{% else %}{{ email }}{% endif %}
+Message:
+======================
+{{ message }}
+======================
+
+
+This message has been automatically generated.
