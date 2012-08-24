@@ -14,6 +14,7 @@ def leave_feedback(
     if form.is_valid():
         feedback = form.save(commit=False)
         feedback.user = request.user
+        feedback.context = ''
         feedback.save()
         url = request.POST.get('next', request.META.get('HTTP_REFERER', '/'))
         return render_to_response(template_name, {
